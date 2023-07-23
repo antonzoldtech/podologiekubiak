@@ -40,6 +40,22 @@ body {
     color: var(--theme-font-color);
 }
 
+p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.section-divider {
+    margin: 50px auto;
+    width: 20%;
+    border: 1px solid var(--theme-font-color);
+}
+
+li{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -231,11 +247,6 @@ body {
     z-index: 1;
 }
 
-.wrapper {
-    box-sizing: border-box;
-    padding-bottom: 60px;
-}
-
 .slideshow-image {
     height: 100%;
     width: 100%;
@@ -248,8 +259,38 @@ body {
     height: 100%;
 }
 
+.wrapper {
+    margin: 0 50px;
+    box-sizing: border-box;
+    padding-bottom: 60px;
+}
+
 .section-header {
-    padding-top: 60px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    align-content: center;
+}
+
+.section-header img {
+    width: 36px;
+    height: 36px;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+h2{
+    font-size: 2rem;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.transit-list p {
+    margin: 0;
 }
 
 footer {
@@ -468,15 +509,15 @@ footer a:hover {
 
     .slideshow-overlay-content .info-grid .info-grid-item p {
         width: 130px;
-        margin: 5px 0px;
+        margin: 5px 0;
         font-size: 0.75rem;
-        letter-spacing: 0px;
+        letter-spacing: 0;
     }
 
     .slideshow-overlay-content .info-grid .info-grid-item img {
         width: 20px;
         height: 20px;
-        padding: 5px 10px 5px 0px;
+        padding: 5px 10px 5px 0;
     }
 
 }
