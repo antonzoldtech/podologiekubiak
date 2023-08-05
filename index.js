@@ -47,7 +47,7 @@ darkModeSliderBar.addEventListener("click", function () {
         root.style.setProperty("theme-color-filter", whiteFilter)
 
     } else {
-        root.style.setProperty("--theme-body-color", whiteIce)
+        root.style.setProperty("--theme-body-color", white)
         root.style.setProperty("--theme-font-color", blackPearl);
         root.style.setProperty("--theme-overlay-color", white)
         root.style.setProperty("--theme-nav-color", deepSea)
