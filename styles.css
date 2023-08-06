@@ -277,7 +277,7 @@ a:hover{
 
 .slideshow-2-wrapper{
     position: relative;
-    height: clamp(300px, 600px, 800px);
+    height: clamp(300px, 600px, 50vh);
     border: 3px solid var(--theme-accent-color);
     box-sizing: border-box;
     width: 100%;
