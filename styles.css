@@ -48,7 +48,7 @@
     --theme-nav-color: var(--fixed-topaz);
     --theme-color-filter: var(--fixed-black-pearl-filter);
     --theme-accent-color: var(--fixed-topaz);
-    --theme-main-logo-background-opacity: 45%;
+    --theme-main-logo-background-opacity: 70%;
 }
 
 html{
@@ -221,7 +221,7 @@ a:hover{
     width: 100%;
     background-color: var(--theme-font-color);
     opacity: var(--theme-main-logo-background-opacity);
-    border-radius: 50%;
+    border-radius: 60%;
 }
 
 .main-logo-title{

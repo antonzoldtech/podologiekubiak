@@ -72,7 +72,7 @@ darkModeSliderBar.addEventListener("click", function () {
         root.style.setProperty("--theme-overlay-color", white)
         root.style.setProperty("--theme-nav-color", topaz)
         root.style.setProperty("--theme-accent-color", topaz)
-        root.style.setProperty("--theme-main-logo-background-opacity", "45%")
+        root.style.setProperty("--theme-main-logo-background-opacity", "70%")
         for (let i = 0; i < document.getElementsByClassName("icon-to-filter").length; i++) {
             document.getElementsByClassName("icon-to-filter").item(i).style.filter = blackPearlFilter
         }
