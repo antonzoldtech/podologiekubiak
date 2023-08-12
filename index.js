@@ -12,21 +12,25 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const slideshow = document.querySelector(".slideshow");
 const slideshow2 = document.querySelector(".slideshow-2")
+let currentScrollPosition = 0;
 
 setInterval(() => {
     if(slideshow){
         const firstSlideshowImage = slideshow.firstElementChild;
-        console.log(firstSlideshowImage)
+        currentScrollPosition = window.scrollY;
         slideshow.removeChild(firstSlideshowImage)
         slideshow.appendChild(firstSlideshowImage)
+        window.scrollTo(0, currentScrollPosition);
     }
 }, 6000)
 
 setInterval(() => {
     if(slideshow) {
         const firstSlideshowImage2 = slideshow2.firstElementChild;
+        currentScrollPosition = window.scrollY;
         slideshow2.removeChild(firstSlideshowImage2)
         slideshow2.appendChild(firstSlideshowImage2)
+        window.scrollTo(0, currentScrollPosition);
     }
 }, 8000)
 
