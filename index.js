@@ -14,24 +14,32 @@ const slideshow = document.querySelector(".slideshow");
 const slideshow2 = document.querySelector(".slideshow-2")
 
 setInterval(() => {
-    const firstSlideshowImage = slideshow.firstElementChild;
-    console.log(firstSlideshowImage)
-    slideshow.removeChild(firstSlideshowImage)
-    slideshow.appendChild(firstSlideshowImage)
+    if(slideshow){
+        const firstSlideshowImage = slideshow.firstElementChild;
+        console.log(firstSlideshowImage)
+        slideshow.removeChild(firstSlideshowImage)
+        slideshow.appendChild(firstSlideshowImage)
+    }
 }, 6000)
 
 setInterval(() => {
-    const firstSlideshowImage2 = slideshow2.firstElementChild;
-    slideshow2.removeChild(firstSlideshowImage2)
-    slideshow2.appendChild(firstSlideshowImage2)
+    if(slideshow) {
+        const firstSlideshowImage2 = slideshow2.firstElementChild;
+        slideshow2.removeChild(firstSlideshowImage2)
+        slideshow2.appendChild(firstSlideshowImage2)
+    }
 }, 8000)
 
-hamburger.addEventListener("click", () => {
-    bar1.classList.toggle("animateBar1");
-    bar2.classList.toggle("animateBar2");
-    bar3.classList.toggle("animateBar3");
-    mobileDrawer.classList.toggle("openDrawer")
-});
+if(hamburger) {
+    hamburger.addEventListener("click", () => {
+        bar1.classList.toggle("animateBar1");
+        bar2.classList.toggle("animateBar2");
+        bar3.classList.toggle("animateBar3");
+        mobileDrawer.classList.toggle("openDrawer")
+
+    });
+}
+
 
 const blackPearl = getComputedStyle(root).getPropertyValue("--fixed-black-pearl")
 const white = getComputedStyle(root).getPropertyValue("--fixed-white")
@@ -52,10 +60,11 @@ darkModeSliderBar.addEventListener("click", function () {
         root.style.setProperty("--theme-overlay-color", onyx)
         root.style.setProperty("--theme-nav-color", onyx)
         root.style.setProperty("--theme-accent-color", geyser)
+        root.style.setProperty("--theme-main-logo-background-opacity", "30%")
         for (let i = 0; i < document.getElementsByClassName("icon-to-filter").length; i++) {
             document.getElementsByClassName("icon-to-filter").item(i).style.filter = whiteFilter
         }
-        root.style.setProperty("theme-color-filter", whiteFilter)
+
 
     } else {
         root.style.setProperty("--theme-body-color", white)
@@ -63,6 +72,7 @@ darkModeSliderBar.addEventListener("click", function () {
         root.style.setProperty("--theme-overlay-color", white)
         root.style.setProperty("--theme-nav-color", topaz)
         root.style.setProperty("--theme-accent-color", topaz)
+        root.style.setProperty("--theme-main-logo-background-opacity", "45%")
         for (let i = 0; i < document.getElementsByClassName("icon-to-filter").length; i++) {
             document.getElementsByClassName("icon-to-filter").item(i).style.filter = blackPearlFilter
         }
